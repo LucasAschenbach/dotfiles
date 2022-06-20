@@ -23,6 +23,17 @@ set mouse=a
 set backspace=indent,eol,start
 set scrolloff=5
 
+map <space> /
+map <C-space> ?
+
+map 0 ^
+ 
+" Move between windows "
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
 " Move lines up and down "
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
