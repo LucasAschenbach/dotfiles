@@ -42,11 +42,10 @@ set ignorecase smartcase
 set mouse=a
 set backspace=indent,eol,start
 
-let mapleader=","
+let mapleader=" "
 
 map 0 ^
 
-nnoremap <Space> za
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
  
