@@ -2,7 +2,7 @@ set nocompatible
 
 " Editor Appearance "
 syntax enable
-set number
+set number relativenumber
 set ruler
 set visualbell
 set cursorline
