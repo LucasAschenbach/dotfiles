@@ -2,12 +2,19 @@ set nocompatible
 
 " Editor Appearance "
 syntax enable
+try
+  colorscheme industry
+catch
+endtry
 set number relativenumber
 set ruler
 set visualbell
+set scrolloff=7
 set cursorline
-:highlight Cursorline cterm=bold ctermbg=black
-set so=7
+highlight Cursorline cterm=NONE ctermbg=235
+set foldmethod=syntax
+set foldlevelstart=20
+highlight Folded ctermbg=235
 
 " Text Styling "
 set wrap
@@ -20,19 +27,28 @@ set expandtab
 set noshiftround
 
 " Misc
+set hidden
 set history=500
+
 set confirm
 command! W execute '!sudo tee % > /dev/null' <bar> edit!
+
+" Search
+set hlsearch
+set incsearch
+set ignorecase smartcase
 
 " Controls "
 set mouse=a
 set backspace=indent,eol,start
-set scrolloff=5
 
-map <space> /
-map <C-space> ?
+let mapleader=","
 
 map 0 ^
+
+nnoremap <Space> za
+map <leader>fi :setlocal foldmethod=indent<cr>
+map <leader>fs :setlocal foldmethod=syntax<cr>
  
 " Move between windows "
 map <C-j> <C-W>j
@@ -43,8 +59,6 @@ map <C-l> <C-W>l
 " Move lines up and down "
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
-inoremap <S-j> <Esc>:m .+1<CR>==gi
-inoremap <S-k> <Esc>:m .-2<CR>==gi
 vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
 
