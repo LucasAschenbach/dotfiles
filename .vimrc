@@ -7,6 +7,7 @@ set ruler
 set visualbell
 set cursorline
 :highlight Cursorline cterm=bold ctermbg=black
+set so=7
 
 " Text Styling "
 set wrap
@@ -17,6 +18,11 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set noshiftround
+
+" Misc
+set history=500
+set confirm
+command! W execute '!sudo tee % > /dev/null' <bar> edit!
 
 " Controls "
 set mouse=a
