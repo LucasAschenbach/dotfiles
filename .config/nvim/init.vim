@@ -32,6 +32,7 @@ Plug 'vv9k/vim-github-dark'
 
 call plug#end()
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,10 +52,10 @@ set ruler
 set visualbell
 set scrolloff=7
 set cursorline
-highlight Cursorline cterm=NONE ctermbg=235
+highlight Cursorline cterm=NONE ctermbg=236
 set foldmethod=syntax
 set foldlevelstart=20
-highlight Folded ctermbg=235
+highlight Folded ctermbg=236
 
 " Text Styling, Formatting"
 set wrap
