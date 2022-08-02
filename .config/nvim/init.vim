@@ -38,7 +38,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 
-" Editor Appearance "
+" Editor Appearance
 syntax enable
 set background=dark
 try
@@ -57,7 +57,7 @@ set foldmethod=syntax
 set foldlevelstart=20
 highlight Folded ctermbg=236
 
-" Text Styling, Formatting"
+" Text Styling, Formatting
 set wrap
 set textwidth=79
 set formatoptions=tcqrn1
