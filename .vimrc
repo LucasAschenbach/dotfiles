@@ -1,11 +1,8 @@
 set nocompatible
 
-" Editor Appearance "
+" Editor Appearance
 syntax enable
-try
-  colorscheme industry
-catch
-endtry
+colorscheme industry
 set number relativenumber
 set ruler
 set visualbell
@@ -16,7 +13,7 @@ set foldmethod=syntax
 set foldlevelstart=20
 highlight Folded ctermbg=235
 
-" Text Styling "
+" Text Styling, Formatting
 set wrap
 set textwidth=79
 set formatoptions=tcqrn1
@@ -25,6 +22,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set noshiftround
+set autoindent
+set smartindent
 
 " Misc
 set hidden
@@ -38,7 +37,7 @@ set hlsearch
 set incsearch
 set ignorecase smartcase
 
-" Controls "
+" Controls
 set mouse=a
 set backspace=indent,eol,start
 
@@ -51,13 +50,13 @@ inoremap jj <esc>j
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
  
-" Move between windows "
+" Move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Move lines up and down "
+" Move lines up and down
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
 vnoremap <S-j> :m '>+1<CR>gv=gv
