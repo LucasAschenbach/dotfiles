@@ -116,4 +116,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ranger=". ranger"
-alias vim="nvim"
+if command -v nvim > /dev/null; then
+  alias vim="nvim"
+fi
