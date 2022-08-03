@@ -2,7 +2,8 @@ set nocompatible
 
 " Editor Appearance
 syntax enable
-colorscheme industry
+colorscheme torte
+highlight Normal ctermbg=235
 set number relativenumber
 set ruler
 set visualbell
