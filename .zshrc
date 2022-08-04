@@ -115,7 +115,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ranger=". ranger"
-if command -v nvim > /dev/null; then
-  alias vim="nvim"
+
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
 fi
+

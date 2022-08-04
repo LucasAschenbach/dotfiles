@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Open location after navigation in ranger
+alias ranger=". ranger"
+
+# Use neovim if available
+if command -v nvim > /dev/null; then
+  alias vim="nvim"
+fi
+
+# Manage dotfiles repository
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
