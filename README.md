@@ -6,11 +6,15 @@
 ```
 git clone --bare git@github.com:lucasaschenbach/dotfiles.git $HOME/.cfg
 ```
-2. Pull files
+2. Create alias for working with repository
+```
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```
+3. Pull files
 ```
 config checkout
 ```
-3. Hide untracked files in git status report
+4. Hide untracked files in git status report
 ```
 config config --local status.showUntrackedFiles no
 ```
