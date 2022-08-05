@@ -4,7 +4,7 @@
 
 1. Initialize git repository
 ```
-git clone --bare git@github.com:lucasaschenbach/dotfiles $HOME/.cfg
+git clone --bare git@github.com:lucasaschenbach/dotfiles.git $HOME/.cfg
 ```
 2. Pull files
 ```
