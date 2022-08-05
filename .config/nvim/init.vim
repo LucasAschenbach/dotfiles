@@ -30,6 +30,9 @@ Plug 'sainnhe/everforest'
 Plug 'dracula/vim'
 Plug 'vv9k/vim-github-dark'
 
+" Devtools
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
 call plug#end()
 
 
