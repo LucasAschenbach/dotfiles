@@ -32,6 +32,18 @@ Plug 'vv9k/vim-github-dark'
 
 " Devtools
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'ervandew/supertab'
+
+" Language/Framework specific
+Plug 'natebosch/vim-lsc'
+
+" Dart + Flutter
+Plug 'natebosch/vim-lsc-dart'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
 
 call plug#end()
 
