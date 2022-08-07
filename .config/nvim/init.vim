@@ -23,6 +23,9 @@ Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Minimap
+Plug 'wfxr/minimap.vim'
+
 " Color Schemes
 Plug 'cocopon/iceberg.vim'
 Plug 'joshdick/onedark.vim'
@@ -47,6 +50,10 @@ Plug 'thosakwe/vim-flutter'
 
 call plug#end()
 
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+let g:minimap_highlight_search = 1
+let g:minimap_git_colors = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Config
