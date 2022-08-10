@@ -1,5 +1,20 @@
-source ./plugins.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Load Files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let configs = [
+    \ 'plugins.vim',
+    \]
 
+let path = stdpath('config')
+for files in configs
+    for f in glob(path.'/'.files, 1, 1)
+        exec 'source' f
+    endfor
+endfor
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 
 " Editor Appearance
