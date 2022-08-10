@@ -104,6 +104,10 @@ else
   export EDITOR='nvim'
 fi
 
+# Load node version manager
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
