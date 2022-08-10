@@ -41,6 +41,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
+Plug 'github/copilot.vim'
 
 " Language/Framework specific
 Plug 'natebosch/vim-lsc'
