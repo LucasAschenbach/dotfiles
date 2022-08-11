@@ -51,4 +51,10 @@ Plug 'natebosch/vim-lsc-dart'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
+" LaTeX
+Plug 'lervag/vimtex'
+
+" Solidity + Ethereum
+Plug 'tomlion/vim-solidity'
+
 call plug#end()
