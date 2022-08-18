@@ -19,3 +19,12 @@ config checkout
 config config --local status.showUntrackedFiles no
 ```
 
+## Installations
+
+- zsh
+- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [ranger](https://github.com/ranger/ranger)
+- highlight
+- [neovim](https://github.com/neovim/neovim)
+- [vim-plug](https://github.com/junegunn/vim-plug)
