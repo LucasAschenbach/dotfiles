@@ -9,12 +9,14 @@ Plug 'xolox/vim-notes'
 
 " File manager
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'universal-ctags/ctags'
 
 " Smooth scrolling
 Plug 'psliwka/vim-smoothie'
 
 " Highlight key letters for jumping in line
 Plug 'unblevable/quick-scope'
+Plug 'luochen1990/rainbow'
 
 " Custom status bar
 Plug 'vim-airline/vim-airline'
@@ -36,10 +38,11 @@ Plug 'dracula/vim'
 Plug 'vv9k/vim-github-dark'
 
 " Devtools
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'iamcco/markdown-preview.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'github/copilot.vim'
 
