@@ -2,14 +2,14 @@
 " => Load Files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let configs = [
-    \ 'plugins.vim',
-    \]
+      \ 'plugins.vim',
+      \]
 
 let path = stdpath('config')
 for files in configs
-    for f in glob(path.'/'.files, 1, 1)
-        exec 'source' f
-    endfor
+  for f in glob(path.'/'.files, 1, 1)
+    exec 'source' f
+  endfor
 endfor
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -19,6 +19,7 @@ set nocompatible
 
 " Editor Appearance
 syntax enable
+set termguicolors
 set background=dark
 try
     colorscheme onedark
@@ -70,6 +71,10 @@ map 0 ^
 
 inoremap jj <esc>j
 
+" Save using cmd+s
+map <M-s> :w<kEnter>
+imap <M-s> <Esc>:w<kEnter>i
+
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
 
@@ -90,3 +95,4 @@ set laststatus=2
 
 set showmode
 set showcmd
+
