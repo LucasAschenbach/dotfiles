@@ -28,3 +28,5 @@ config config --local status.showUntrackedFiles no
 - highlight
 - [neovim](https://github.com/neovim/neovim)
 - [vim-plug](https://github.com/junegunn/vim-plug)
+- [tmux](https://github.com/tmux/tmux)
+- [tmp](https://github.com/tmux-plugins/tpm)
