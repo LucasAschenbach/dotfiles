@@ -75,8 +75,14 @@ inoremap jj <esc>j
 map <M-s> :w<kEnter>
 imap <M-s> <Esc>:w<kEnter>i
 
-map <leader>fi :setlocal foldmethod=indent<cr>
-map <leader>fs :setlocal foldmethod=syntax<cr>
+" Find files using Telescope command-line sugar.
+nnoremap <C-p> :Telescope find_files<CR>
+inoremap <C-p> <Esc>:Telescope find_files<CR>
+vnoremap <C-p> :Telescope find_files<CR>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Move between windows
 map <C-j> <C-W>j

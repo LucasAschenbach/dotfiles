@@ -1,54 +1,8 @@
 call plug#begin()
 
-" View documentation by pressing 'K' on word
-Plug 'dbeniamine/cheat.sh-vim'
-
-" Note Taking
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes'
-
-let g:notes_tab_indents = 0
-
-" Tmux integration
-Plug 'christoomey/vim-tmux-navigator'
-
-" File manager
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-let g:fzf_preview_window = ['up:40%', 'ctrl-p']
-
-" Plug 'nvim-telescope/telescope.nvim'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'scrooloose/nerdtree-project-plugin'
-Plug 'ryanoasis/vim-devicons'
-
-" Smooth scrolling
-Plug 'psliwka/vim-smoothie'
-
-" Highlight key letters for jumping in line
-Plug 'unblevable/quick-scope'
-Plug 'luochen1990/rainbow'
-
-" let g:rainbow_active = 1
-
-" Colorize color codes
-Plug 'NvChad/nvim-colorizer.lua'
-
-" Custom status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Minimap
-" Plug 'wfxr/minimap.vim'
-
-" let g:minimap_auto_start = 1
-" let g:minimap_auto_start_win_enter = 1
-" let g:minimap_git_colors = 1
-" let g:minimap_highlight_search = 1
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Appearance
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color Schemes
 Plug 'cocopon/iceberg.vim'
 Plug 'joshdick/onedark.vim'
@@ -58,20 +12,69 @@ Plug 'vv9k/vim-github-dark'
 Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 
-" Devtools
-Plug 'iamcco/markdown-preview.nvim'
+" Custom icons
+Plug 'ryanoasis/vim-devicons'
+
+" Smooth scrolling
+Plug 'psliwka/vim-smoothie'
+
+let g:smoothie_update_interval = 16 " 60fps
+let g:smoothie_speed_constant_factor = 80
+
+" Highlight key letters for jumping in line
+Plug 'unblevable/quick-scope'
+Plug 'luochen1990/rainbow'
+
+" Colorize color codes
+Plug 'NvChad/nvim-colorizer.lua'
+
+" Custom status bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Display git diff next to line numbers
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => File Navigation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" File Finder
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
+
+" let g:fzf_preview_window = ['up:40%', 'ctrl-p']
+
+Plug 'universal-ctags/ctags'
+
+" File Explorer
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'scrooloose/nerdtree-project-plugin'
+
+" Tmux Integration
+Plug 'christoomey/vim-tmux-navigator'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Dev-Tools
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Editing Tools
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+
+" Code Completion
 Plug 'ervandew/supertab'
 Plug 'github/copilot.vim'
+Plug 'dbeniamine/cheat.sh-vim'
 
 " Language/Framework specific
 Plug 'natebosch/vim-lsc'
-Plug 'universal-ctags/ctags'
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter-context'
+" Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter-context'
+
+" Markdown
+Plug 'iamcco/markdown-preview.nvim'
 
 " Dart + Flutter
 Plug 'natebosch/vim-lsc-dart'
@@ -90,8 +93,20 @@ Plug 'jupyter-vim/jupyter-vim'
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Applications
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Note Taking
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+
+let g:notes_tab_indents = 0
+
 call plug#end()
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Post install configs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorizer
 lua require'colorizer'.setup()
 
