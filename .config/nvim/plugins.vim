@@ -39,12 +39,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Minimap
-Plug 'wfxr/minimap.vim'
+" Plug 'wfxr/minimap.vim'
 
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
-let g:minimap_git_colors = 1
-let g:minimap_highlight_search = 1
+" let g:minimap_auto_start = 1
+" let g:minimap_auto_start_win_enter = 1
+" let g:minimap_git_colors = 1
+" let g:minimap_highlight_search = 1
 
 " Color Schemes
 Plug 'cocopon/iceberg.vim'
