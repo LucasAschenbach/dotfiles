@@ -9,6 +9,9 @@ Plug 'xolox/vim-notes'
 
 let g:notes_tab_indents = 0
 
+" Tmux integration
+Plug 'christoomey/vim-tmux-navigator'
+
 " File manager
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
