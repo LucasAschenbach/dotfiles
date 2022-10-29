@@ -84,6 +84,9 @@ Plug 'tomlion/vim-solidity'
 " Jupyter Notebook
 Plug 'jupyter-vim/jupyter-vim'
 
+" Julia
+Plug 'JuliaEditorSupport/julia-vim'
+
 call plug#end()
 
 " Colorizer
