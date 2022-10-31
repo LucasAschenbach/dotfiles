@@ -38,18 +38,6 @@ Plug 'airblade/vim-gitgutter'
 " Indent guides
 Plug 'lukas-reineke/indent-blankline.nvim'
 
-lua << EOF
-require("indent_blankline").setup {
-    char = "▏",
-    buftype_exclude = {"terminal"},
-    filetype_exclude = {"help", "packer", "NvimTree", "Trouble"},
-    show_trailing_blankline_indent = false,
-    show_first_indent_level = false,
-    space_char_blankline = " ",
-    show_current_context = true,
-}
-EOF
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Navigation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -116,6 +104,18 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Post install configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indent-blankline
+lua << EOF
+require("indent_blankline").setup {
+    char = "▏",
+    buftype_exclude = {"terminal"},
+    filetype_exclude = {"help", "packer", "NvimTree", "Trouble"},
+    show_trailing_blankline_indent = false,
+    show_first_indent_level = false,
+    space_char_blankline = " ",
+}
+EOF
+
 " Colorizer
 lua require'colorizer'.setup()
 
