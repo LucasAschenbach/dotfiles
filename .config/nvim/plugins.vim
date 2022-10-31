@@ -56,10 +56,6 @@ EOF
 " File Finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
-
-" let g:fzf_preview_window = ['up:40%', 'ctrl-p']
 
 Plug 'universal-ctags/ctags'
 
@@ -85,8 +81,6 @@ Plug 'dbeniamine/cheat.sh-vim'
 
 " Language/Framework specific
 Plug 'natebosch/vim-lsc'
-" Plug 'nvim-treesitter/nvim-treesitter'
-" Plug 'nvim-treesitter/nvim-treesitter-context'
 
 " Markdown
 Plug 'iamcco/markdown-preview.nvim'
