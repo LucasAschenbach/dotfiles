@@ -16,7 +16,7 @@ highlight Folded ctermbg=235
 
 " Text Styling, Formatting
 set wrap
-set textwidth=79
+set colorcolumn=80
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
