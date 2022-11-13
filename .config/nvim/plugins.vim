@@ -32,6 +32,10 @@ Plug 'NvChad/nvim-colorizer.lua'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Custom tab bar
+Plug 'romgrk/barbar.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 " Display git diff next to line numbers
 Plug 'airblade/vim-gitgutter'
 
