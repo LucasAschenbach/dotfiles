@@ -12,8 +12,16 @@ fi
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Exa
-alias ll="exa -l -g --icons --git"
-alias llt="exa -1 --icons --tree --git-ignore"
+alias ll="eza -l -g --icons --git"
+alias llt="eza -1 --icons --tree --git-ignore"
 
 # Python
-alias python="python3"
+alias python="python3.11"
+alias pip="pip3.11"
+
+# GitHub Copilot CLI
+eval "$(gh copilot alias -- zsh)"
+alias \?\?="ghcs -t shell"
+alias git\?="ghcs -t git"
+alias gh\?="ghcs -t gh"
+
