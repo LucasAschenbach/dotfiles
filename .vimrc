@@ -2,9 +2,8 @@ set nocompatible
 
 " Editor Appearance
 syntax enable
-colorscheme torte
-highlight Normal ctermbg=235
 set number relativenumber
+highlight LineNr ctermfg=240
 set ruler
 set visualbell
 set scrolloff=7
@@ -13,10 +12,11 @@ highlight Cursorline cterm=NONE ctermbg=235
 set foldmethod=syntax
 set foldlevelstart=20
 highlight Folded ctermbg=235
+set colorcolumn=80
+highlight ColorColumn ctermbg=235
 
 " Text Styling, Formatting
 set wrap
-set colorcolumn=80
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
@@ -50,7 +50,7 @@ inoremap jj <esc>j
 
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
- 
+
 " Move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
