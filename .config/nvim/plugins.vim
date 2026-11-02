@@ -25,9 +25,6 @@ let g:smoothie_speed_constant_factor = 80
 Plug 'unblevable/quick-scope'
 Plug 'luochen1990/rainbow'
 
-" Colorize color codes
-Plug 'NvChad/nvim-colorizer.lua'
-
 " Custom status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -72,7 +69,11 @@ Plug 'github/copilot.vim'
 Plug 'dbeniamine/cheat.sh-vim'
 
 " Language/Framework specific
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'natebosch/vim-lsc'
+Plug 'jpalardy/vim-slime'
+
+let g:slime_target = "tmux"
 
 " Markdown
 Plug 'iamcco/markdown-preview.nvim'
@@ -103,6 +104,11 @@ Plug 'xolox/vim-notes'
 
 let g:notes_tab_indents = 0
 
+" Leetcode
+Plug 'ianding1/leetcode.vim'
+
+let g:leetcode_browser = 'chrome'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -110,18 +116,8 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent-blankline
 lua << EOF
-require("indent_blankline").setup {
-    char = "▏",
-    buftype_exclude = {"terminal"},
-    filetype_exclude = {"help", "packer", "NvimTree", "Trouble"},
-    show_trailing_blankline_indent = false,
-    show_first_indent_level = false,
-    space_char_blankline = " ",
-}
+require("ibl").setup()
 EOF
-
-" Colorizer
-lua require'colorizer'.setup()
 
 " NERDTree
 " Exit Vim if NERDTree is the only window remaining in the only tab.
