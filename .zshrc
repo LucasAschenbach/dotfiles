@@ -72,6 +72,7 @@ ZSH_WEB_SEARCH_ENGINES=(
     reddit "https://www.reddit.com/search/?q="
     twitter "https://www.twitter.com/search/?q="
     linguee "https://www.linguee.com/search?source=auto&query="
+    perplexity "https://perplexity.ai/search?q="
 )
 
 # Which plugins would you like to load?
@@ -89,6 +90,10 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Vim mode
+bindkey -v
+set -o vi
 
 # User configuration
 
@@ -127,8 +132,85 @@ if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
 
+if [ -f ~/.zshenv ]; then
+  source ~/.zshenv
+fi
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+# Noir
+export PATH="$PATH:/Users/lucasaschenbach/.helios/bin"
+
+export NARGO_HOME="/Users/lucasaschenbach/.nargo"
+
+export PATH="$PATH:$NARGO_HOME/bin"
+
+export NARGO_HOME="/Users/lucasaschenbach/.nargo"
+
+export PATH="$PATH:$NARGO_HOME/bin"
+export PATH=$PATH:/Users/lucasaschenbach/.aztec/bin
+
+export PATH="$PATH:$HOME/.local/bin"
+
+# Barettenberg Proving Backend
+export PATH="${HOME}/.bb:${PATH}"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/lucasaschenbach/.juliaup/bin' $path)
+export PATH
+# Tab completion for juliaup and julia channel selection
+[ -f "/Users/lucasaschenbach/.julia/juliaup/completions/zsh.zsh" ] && source "/Users/lucasaschenbach/.julia/juliaup/completions/zsh.zsh"
+
+# <<< juliaup initialize <<<
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# Google Cloud SDK
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/lucasaschenbach/Developer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lucasaschenbach/Developer/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lucasaschenbach/Developer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lucasaschenbach/Developer/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Solana CLI
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+# Gurobi
+export GRB_LICENSE_FILE=/Users/lucasaschenbach/.gurobi/gurobi.lic
+export PATH="/Users/lucasaschenbach/.bb:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/lucasaschenbach/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/lucasaschenbach/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/lucasaschenbach/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/lucasaschenbach/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Added by Antigravity
+export PATH="/Users/lucasaschenbach/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/lucasaschenbach/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/lucasaschenbach/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/lucasaschenbach/.antigravity/antigravity/bin:$PATH"
